@@ -1,1 +1,2 @@
-GET http://localhost:4221/
+GET http://localhost:4221
+Accept-Encoding: gzip

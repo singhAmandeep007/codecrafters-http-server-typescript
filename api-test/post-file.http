@@ -1,0 +1,5 @@
+POST http://localhost:4221/files/fileToGenerate.txt
+Content-Type: text/plain
+
+
+Hello, world!

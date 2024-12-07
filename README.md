@@ -1,4 +1,4 @@
-[![progress-banner](https://backend.codecrafters.io/progress/http-server/c19cb029-ecf7-4464-8e45-1853b5392482)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
+[![progress-banner](https://backend.codecrafters.io/progress/http-server/732e2ec1-a2ad-43cd-b0fb-cf694cf4fde9)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
 
 This is a starting point for TypeScript solutions to the
 ["Build Your Own HTTP server" Challenge](https://app.codecrafters.io/courses/http-server/overview).
@@ -35,3 +35,11 @@ Note: This section is for stages 2 and beyond.
    `app/main.ts`.
 1. Commit your changes and run `git push origin master` to submit your solution
    to CodeCrafters. Test output will be streamed to your terminal.
+
+## Running server locally
+
+To run the server locally, you can run the following command:
+
+```sh
+bun run dev
+```
