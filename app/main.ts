@@ -29,7 +29,22 @@ const server = net.createServer((socket) => {
 			
 			* READ-MORE: https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages#http_responses
 		 */
-    const response = `HTTP/1.1 200 OK\r\n\r\n`;
+
+    // Parse the request to determine the path.
+    const request = data.toString();
+    const lines = request.split("\r\n");
+    const [method, path] = lines[0].split(" ");
+
+    // Check if the requested path is valid.
+    let response: string;
+
+    if (method === "GET" && path === "/") {
+      // Respond with HTTP 200 OK for a valid request ("/")
+      response = "HTTP/1.1 200 OK\r\n\r\n";
+    } else {
+      // Respond with HTTP 404 Not Found for other requests
+      response = "HTTP/1.1 404 Not Found\r\n\r\n";
+    }
 
     // Send the response and close the connection.
     socket.write(response);
